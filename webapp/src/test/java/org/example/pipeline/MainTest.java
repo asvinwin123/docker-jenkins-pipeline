@@ -1,3 +1,4 @@
+/*
 package org.example.pipeline;
 
 import com.couchbase.client.java.Bucket;
@@ -10,7 +11,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class MainTest
+/*public class MainTest
         extends TestCase {
 
     /**
@@ -18,21 +19,21 @@ public class MainTest
      *
      * @param testName name of the test case
      */
-    public MainTest(String testName) {
+/*    public MainTest(String testName) {
         super(testName);
     }
 
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite() {
+/*    public static Test suite() {
         return new TestSuite(MainTest.class);
     }
 
     /**
      * Check if the JSON document was correctly added
      */
-    public void testDocument() {
+/*    public void testDocument() {
         Bucket bucket = Database.getBucket("books");
 
         JsonDocument doc = bucket.get("minecraft");
@@ -52,3 +53,4 @@ public class MainTest
         assertTrue(jsonObject.getString("cost").equals("29.99"));
     }
 }
+*/
