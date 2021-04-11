@@ -38,8 +38,12 @@ node {
     try {
       dir('webapp') {
         sh "mvn test"
-        docker.build("asvinwin123/docker-jenkins-pipeline:${env.BUILD_NUMBER}").push()
-      }
+        //docker.build("asvinwin123/docker-jenkins-pipeline:${env.BUILD_NUMBER}").push()
+        def appimage = docker.build registry + ":$BUILD_NUMBER"
+        docker.withRegistry( '', 'b00de5ae-26b1-4813-8145-0118a47e7e78' ) {
+            appimage.push()
+            appimage.push('latest')
+        }
     } catch (error) {
 
     } finally {
