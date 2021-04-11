@@ -44,6 +44,7 @@ node {
             appimage.push()
             appimage.push('latest')
         }
+      }
     } catch (error) {
 
     } finally {
